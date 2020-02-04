@@ -10,6 +10,12 @@ capybara-*.html
 *.orig
 rerun.txt
 pickle-email-*.html
+/config/database.yml
+/config/deploy/*
+/config/application.yml
+/coverage
+/public/uploads
+/public/assets
 
 # Ignore all logfiles and tempfiles.
 /log/*
