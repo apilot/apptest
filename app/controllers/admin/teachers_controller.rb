@@ -17,4 +17,8 @@ class Admin::TeachersController < Admin::BaseController
 
   def destroy
   end
+  private
+  def set_active_main_menu_item
+    @main_menu[:teachers][:active] = true
+  end
 end
