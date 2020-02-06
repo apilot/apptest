@@ -1,2 +1,2 @@
-require jquery
-require bootstrap-sprokets
+#= require jquery
+#= require rails-ujs
