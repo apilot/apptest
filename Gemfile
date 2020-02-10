@@ -40,7 +40,7 @@ gem 'cocoon'
 gem 'best_in_place'
 
 gem 'russian', github: 'yaroslav/russian'
-gem 'breadcrumbs_on_rails', github: 'aleksevd/breadcrumbs_on_rails'
+gem 'breadcrumbs_on_rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 

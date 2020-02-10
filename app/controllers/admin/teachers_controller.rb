@@ -6,7 +6,7 @@ class Admin::TeachersController < Admin::BaseController
   end
 
   def new
-    add_breadcrumb "Новый преподаватель", index_path
+    add_breadcrumb "Новый преподаватель", new_admin_teacher_path
     @teacher = Teacher.new
   end
 
@@ -16,21 +16,22 @@ class Admin::TeachersController < Admin::BaseController
     if @teacher.save
         redirect_to admin_teachers_path, notice: 'Преподаватель успешно создан'
     else
-      add_breadcrumb "Новый преподаватель", index_path
+      add_breadcrumb "Новый преподаватель", new_admin_teacher_path
       flash.now[:alert] = 'Не удалось создать преподавателя'
       render :new
     end
   end
 
   def edit
-    add_breadcrumb "Редактирование #{@teacher.last_name}", index_path
+    add_breadcrumb "Редактирование #{@teacher.first_name} #{@teacher.last_name}", [:edit, :admin, @teacher]
   end
 
   def update
     if @teacher.update(teacher_params)
         redirect_to admin_teachers_path, notice: 'Преподаватель успешно обновлен'
     else
-      flash.now[:alert] = 'Не удалось обновить данные преподавателя'
+      add_breadcrumb "Редактирование #{@teacher.first_name} #{@teacher.last_name}",  [:edit, :admin, @teacher]
+      flash.now[:alert] = 'Не удалось обновить данные преподавателя',  [:admin, @teacher]
       render :edit
     end
   end
