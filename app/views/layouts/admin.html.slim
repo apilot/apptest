@@ -9,10 +9,11 @@ html
     body
     = render 'admin/shared/main_menu'
     .container
-      .row
-        .col-md-12
-          .ol.breadcrumb
-            = render_breadcrumbs tag: :li, separator: ''
+      - if current_admin
+        .row
+          .col-md-12
+            .ol.breadcrumb
+              = render_breadcrumbs tag: :li, separator: ''
       .row
         .col-md-12
           = render_flash

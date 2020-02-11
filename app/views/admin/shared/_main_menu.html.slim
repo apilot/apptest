@@ -28,17 +28,10 @@ nav.navbar.navbar-default
             a href="#"  Link
           li.dropdown
             a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
-              | Dropdown
+              | #{current_admin.first_name} #{current_admin.last_name}
               span.caret
             ul.dropdown-menu
               li
-                a href="#"  Action
-              li
-                a href="#"  Another action
-              li
-                a href="#"  Something else here
-              li.divider role="separator"
-              li
-                a href="#"  Separated link
+                = link_to "Выйти", destroy_admin_session_path, method: :delete
       /! /.navbar-collapse
     /! /.container-fluid
