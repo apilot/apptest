@@ -46,7 +46,8 @@ gem 'bootstrap-kaminari-views'
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'draper', github: 'drapergem/draper'
+gem 'acts_as_list'
+gem 'draper'
 
 gem 'devise'
 gem 'state_machines-activerecord'
