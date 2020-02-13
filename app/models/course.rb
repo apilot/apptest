@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  #include Authority::Abilities
+  include Authority::Abilities
 
   belongs_to :teacher
 
@@ -10,10 +10,10 @@ class Course < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :disciplines, presence: true
+  validates :disciplines, presence: false
 
   #mount_uploader :mail_image, MainCourseImageUploader
 
-  accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
+  #accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
 
   end

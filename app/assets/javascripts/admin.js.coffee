@@ -1,3 +1,14 @@
 #= require jquery
 #= require rails-ujs
 #= require bootstrap
+#= require jquery-ui
+#= require jquery.ui.touch-punch.min
+#= require rails-ujs
+#= require bootstrap-sprockets
+#= require moment
+#= require moment/ru
+#= require bootstrap-datetimepicker
+#= require cocoon
+#= require tinymce
+#= require lightbox
+#= require_tree './admin'
