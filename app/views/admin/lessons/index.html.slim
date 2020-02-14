@@ -1,0 +1,14 @@
+h3 Уроки
+
+= link_to 'Добавить урок', new_admin_course_path, class: 'btn btn-success pull-right'
+table.table.table-striped
+  thead
+    tr
+      th
+      th Название
+      th Описание
+  tbody
+    = render @lessons.decorate
+
+
+= paginate @lessons, theme: 'twitter-bootstrap-3'

@@ -1,0 +1,16 @@
+h3 Администраторы
+
+= link_to 'Добавить администратора', new_admin_admin_path, class: 'btn btn-success pull-right'
+table.table.table-striped
+  thead
+    tr
+      th
+      th email
+      th Name
+      th Last Name
+
+  tbody
+    = render @admins
+
+
+= paginate @admins, theme: 'twitter-bootstrap-3'

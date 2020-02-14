@@ -5,14 +5,15 @@ class Admin::BaseController < ApplicationController
   before_action :set_active_main_menu_item, except: [:destroy, :sort]
 
   respond_to :html
-  
+
   private
 
   def set_main_menu
     @main_menu = {
       courses: {name: "Курсы", path: admin_courses_path},
       teachers: { name: "Преподаватели", path: admin_teachers_path},
-      disciplines: { name: "Дисциплины", path: admin_disciplines_path}
+      disciplines: { name: "Дисциплины", path: admin_disciplines_path},
+      admins: { name: 'Админы', path: admin_admins_path }
     }
   end
 end
