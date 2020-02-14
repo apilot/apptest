@@ -6,7 +6,7 @@ class Course < ApplicationRecord
   has_many :discipline_courses, dependent: :destroy
   has_many :disciplines, through: :discipline_courses
   has_many :sections, dependent: :destroy
-  #has_many :lessons, dependent: :restrict_with_error
+  has_many :lessons, dependent: :restrict_with_error
 
   validates :name, presence: true
   validates :description, presence: true
