@@ -10,7 +10,7 @@ class Course < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :disciplines, presence: false
+  validates :disciplines, presence: true
 
   #mount_uploader :mail_image, MainCourseImageUploader
 

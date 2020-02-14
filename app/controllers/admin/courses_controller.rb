@@ -64,7 +64,7 @@ end
   end
   def course_params
     params.require(:course).permit(:name, :description, :teacher_id, :main_image,
-                          :main_image_cache, descipline_ids: [],
+                          :main_image_cache, discipline_ids: [],
                         sections_attributes: [:_destroy, :id, :name, :description, :position])
   end
 end
