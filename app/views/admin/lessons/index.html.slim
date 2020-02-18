@@ -1,12 +1,14 @@
-h3 Уроки
+h3 Занятие
 
-= link_to 'Добавить урок', [:new, :admin, @course, :lesson], class: 'btn btn-success pull-right'
+= link_to 'Добавить занятие', [:new, :admin, @course, :lesson], class: 'btn btn-success pull-right'
+
 table.table.table-striped
   thead
     tr
       th
+      th
+      th Номер
       th Название
-      th Описание
-//  tbody.lessons_sortable data-update-url=admin_api_lessons_mass_update_path
-    tbody
-      = render @lesson
+
+  tbody.lessons_sortable data-update-url=sort_admin_lessons_path
+    = render @lessons
