@@ -24,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'jquery-ui-rails' #, '~> 5.0.5'
 
 gem 'bootstrap-sass'
 gem 'bootstrap-select-rails'
