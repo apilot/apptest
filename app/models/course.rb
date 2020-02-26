@@ -5,9 +5,8 @@ class Course < ApplicationRecord
 
   has_many :discipline_courses, dependent: :destroy
   has_many :disciplines, through: :discipline_courses
-
-  has_many :lessons, dependent: :restrict_with_error
   has_many :sections, dependent: :destroy
+  has_many :lessons, dependent: :restrict_with_error
 
   validates :name, presence: true
   validates :description, presence: true
@@ -15,16 +14,6 @@ class Course < ApplicationRecord
 
   #mount_uploader :mail_image, MainCourseImageUploader
 
-  accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
-    def user_lessons
-      UserLesson.joins(:lesson).where(lessons: { course_id: id })
-    end
+  #accepts_nested_attributes_for :sections, reject_if: :all_blank, allow_destroy: true
 
-    def current_flow
-      flows.active
-    end
-
-    def can_be_destroyed?
-      !(lessons.exists? || user_courses.exists?)
-    end
   end
