@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'main#index'
+
   scope :admin do
     devise_for :admins, controllers: { sessions: 'admin/admins/sessions'}
   end
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
     resources :teachers, except: :show
     resources :disciplines, except: :show
     resources :admins, except: :show
-    
+
     resources :courses, except: :show do
       resources :lessons, except: :show
       resources :flows, except: :show

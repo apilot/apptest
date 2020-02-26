@@ -1,0 +1,23 @@
+doctype html
+html.no-js lang="ru-RU"
+  head
+    /! Mobile Specific Meta
+    meta content="text/html, charset=UTF-8, width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    /! Favicon
+    link href="img/fav.png" rel=("shortcut icon") /
+    /! Author Meta
+    meta content="colorlib" name="author" /
+    /! Meta Description
+    meta content="" name="description" /
+    /! Meta Keyword
+    meta content="" name="keywords" /
+    /! meta character set
+    meta charset="UTF-8" /
+    /! Site Title
+    title Pages
+    link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet" /
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+      = yield

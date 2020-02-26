@@ -14,4 +14,4 @@
 //= require jquery.ui.touch-punch.min
 //= require jquery-ui
 //= require bootstrap
-//= require_tree .
+//= require_tree './application'
